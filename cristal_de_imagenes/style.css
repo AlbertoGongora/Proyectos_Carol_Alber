@@ -14,78 +14,148 @@ body {
 }
 
 main {
+    width: 530px;
+    height: 530px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 10px;
-    padding: 10px;
-    gap: 10px;
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     transform: rotate(45deg);
-
 }
 
 div {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+}
+
+.active {
     background-color: #ccc;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: all 0.2s ease;
     font-size: 24px;
 }
 
-#uno:hover {
-    background-color: #9c9292;
-    cursor: pointer;
-    transform: scale(1.5);
-    margin: 20px;
+/* primera linea */
+#cuatro { 
+    top: 0; 
+    left: 270px;
+    grid-row: span 2;
+    height: 170px;
 }
-#dos:hover {
-    background-color: #9c9292;
-    cursor: pointer;
-    transform: scale(1.5);
-    margin: 20px;
+
+/* segunda linea */
+#nueve { top: 90px; left: 180px; }
+#diez { top: 90px; left: 360px; }
+
+/* tercera linea */
+#trece { top: 180px; left: 90px; }
+#catorce { top: 180px; left: 180px; }
+#quince { top: 180px; left: 270px; }
+#dieciseis { 
+    top: 180px; 
+    left: 360px; 
+    grid-column: span 2;
+    width: 170px;
 }
-#tres:hover {
-    background-color: #9c9292;
-    cursor: pointer;
-    transform: scale(1.5);
-    margin: 20px;
+
+/* cuarta linea */
+#diecisiete { 
+    top: 270px; 
+    left: 0; 
+    grid-column: span 2;
+    width: 170px;
 }
-#cuatro:hover {
-    background-color: #9c9292;
-    cursor: pointer;
-    transform: scale(1.5);
-    margin: 20px;
+#dieciocho{ top: 270px; left: 180px; }
+#diecinueve { top: 270px; left: 270px; }
+#veinte { top: 270px; left: 360px; }
+
+/* quinta linea */
+#veintitres { top: 360px; left: 90px; }
+#veinticuatro { 
+    top: 360px; 
+    left: 180px; 
+    grid-row: span 2;
+    height: 170px;
 }
-#cinco:hover {
-    background-color: #9c9292;
+#veinticinco { top: 360px; left: 270px; }
+
+/* sexta linea no tiene divs, ya que el el 24 aumenta el tamaño */
+
+.down:active {
+    width: 170px;
+    height: 170px;
     cursor: pointer;
-    transform: scale(1.5);
-    margin: 20px;
+    transition: all 0.2s ease;
+    /* background-color: blue; */
+    z-index: 1;
 }
-#seis:hover {
-    background-color: #9c9292;
+
+.up:active {
+    width: 170px;
+    height: 170px;
     cursor: pointer;
-    transform: scale(1.5);
-    margin: 20px;
+    transition: all 0.2s ease;
+    transform: translate(-90px, -90px);
+    /* background-color: red; */
+    z-index: 1;
+
 }
-#siete:hover {
-    background-color: #9c9292;
+
+.left:active {
+    width: 170px;
+    height: 170px;
     cursor: pointer;
-    transform: scale(1.5);
-    margin: 20px;
+    transition: all 0.2s ease;
+    transform: translate(-90px, 0);
+    /* background-color: green; */
+    z-index: 1;
 }
-#ocho:hover {
-    background-color: #9c9292;
+
+.right:active {
+    width: 170px;
+    height: 170px;
     cursor: pointer;
-    transform: scale(1.5);
-    margin: 20px;
+    transition: all 0.2s ease;
+    transform: translate(0, -90px);
+    /* background-color: purple; */
+    z-index: 1;
 }
-#nueve:hover {
-    background-color: #9c9292;
+
+.big-up-left:active {
+    width: 170px;
+    height: 260px;
     cursor: pointer;
-    transform: scale(1.5);
-    margin: 20px;
+    transition: all 0.2s ease;
+    transform: translate(0, -90px);
+    /* background-color: antiquewhite; */
+    z-index: 1;
+}
+
+.big-up-right:active {
+    width: 260px;
+    height: 170px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    transform: translate(-90px, 0); 
+    /* background-color: orange; */
+    z-index: 1;
+}
+
+.big-down-left:active {
+    width: 260px;
+    height: 170px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    transform: translate(-90px, 0); 
+    /* background-color: brown; */
+    z-index: 1;
+}
+
+.big-down-right:active {
+    width: 170px;
+    height: 260px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    transform: translate(0, -90px);
+
+    z-index: 1;
 }
